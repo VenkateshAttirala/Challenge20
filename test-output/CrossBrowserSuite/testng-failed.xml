@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite parallel="tests" name="Failed suite [CrossBrowserSuite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" parallel="tests" name="FireFox_Test(failed)">
+    <parameter name="browser" value="firefox"/>
+    <classes>
+      <class name="testCases.TC001_PlaceOrder">
+        <methods>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+          <include name="placeOrder"/>
+        </methods>
+      </class> <!-- testCases.TC001_PlaceOrder -->
+    </classes>
+  </test> <!-- FireFox_Test(failed) -->
+  <test thread-count="5" parallel="tests" name="Chrome_Test(failed)">
+    <parameter name="browser" value="chrome"/>
+    <classes>
+      <class name="testCases.TC001_PlaceOrder">
+        <methods>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+          <include name="placeOrder"/>
+        </methods>
+      </class> <!-- testCases.TC001_PlaceOrder -->
+    </classes>
+  </test> <!-- Chrome_Test(failed) -->
+</suite> <!-- Failed suite [CrossBrowserSuite] -->
